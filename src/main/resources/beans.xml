@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!-- Basket bean -->
+	<bean id="Basket" name="Basket" class="objects.Basket">
+            <constructor-arg ref="BasketColour"/>
+            <constructor-arg ref="BasketSize" />
+            <constructor-arg ref="BasketShape" />
+	</bean>
+       
+        <!-- Basket Colour bean --> 
+        <bean id="BasketColour" name="BasketColour" class="objects.BasketColour">
+            <property name="primaryColour" value="Blue"/>
+            <property name="secondaryColour" value="White"/>
+        </bean>
+        
+        <!--Basket Size bean -->
+        <bean id="BasketSize" name="BasketSize" class="objects.BasketSize">
+            <property name="diameter" value="5"/>
+            <property name="height" value="10"/>
+        </bean>
+        
+        <!--Basket Shape bean-->
+        <bean id="BasketShape" name="BasketShape" class="objects.BasketShape">
+            <property name="shape" value="Round"/>
+        </bean>
+        
+</beans>
